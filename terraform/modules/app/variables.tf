@@ -1,0 +1,15 @@
+variable "project_name"     { type = string }
+variable "environment"      { type = string }
+variable "vpc_id"           { type = string }
+variable "app_subnet_ids"   { type = list(string) }
+variable "app_sg_id"        { type = string }
+variable "app_alb_sg_id"    { type = string }
+variable "instance_type"    { type = string }
+variable "min_size"         { type = number }
+variable "max_size"         { type = number }
+variable "desired_capacity" { type = number }
+variable "ami_id"           { type = string }
+variable "key_name"         { type = string }
+variable "db_endpoint"      { type = string }
+variable "db_name"          { type = string }
+variable "db_secret_arn"    { type = string }
