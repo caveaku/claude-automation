@@ -109,9 +109,7 @@ resource "aws_db_instance" "main" {
   maintenance_window        = "Mon:04:00-Mon:05:00"
   auto_minor_version_upgrade = true
 
-  performance_insights_enabled          = true
-  performance_insights_retention_period = 7
-  performance_insights_kms_key_id       = aws_kms_key.rds.arn
+  performance_insights_enabled = false
 
   monitoring_interval = 60
   monitoring_role_arn = aws_iam_role.rds_enhanced_monitoring.arn
